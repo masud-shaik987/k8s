@@ -15,3 +15,4 @@ specs:
       containers:
         - name: my-containers
           image: nginx
+          port: 80
