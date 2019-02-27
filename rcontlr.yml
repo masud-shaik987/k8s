@@ -1,0 +1,17 @@
+apiVersion: v1
+Kind: ReplicationController
+metadata:
+  name: nginx
+specs:
+  relicas: 2
+  selector:
+    app: myapp
+  templates:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: my-containers
+          image: nginx
